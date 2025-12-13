@@ -51,7 +51,7 @@
 
 ## 📋 法
 
-## 📋 器术
+## 📋 术
 
 ## 📋 器
 - [**Claude Opus 4.5**](https://claude.ai/new)，在 Claude Code 中使用 很贵，但是尼区ios订阅要便宜几百人民币，快+效果好，顶中顶中顶，有 cli 和 ide 插件
