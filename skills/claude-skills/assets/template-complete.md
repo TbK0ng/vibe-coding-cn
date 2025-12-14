@@ -1,78 +1,109 @@
 ---
 name: my-skill
-description: Full description of what this skill does, when to use it, and its core capabilities
+description: [Domain] development and operations including [capability 1], [capability 2], [capability 3]. Use when working with [domain], implementing [solutions], or troubleshooting [issues].
 ---
 
-# Skill Name
+# [Skill Name] Skill
 
-## Overview
-
-Brief explanation of the skill's purpose and value.
+Comprehensive assistance with [domain] development, generated from official documentation.
 
 ## When to Use This Skill
 
-- Scenario 1: [description]
-- Scenario 2: [description]
-- Scenario 3: [description]
+This skill should be triggered when:
+- Working with [domain/technology]
+- Asking about [domain] features or APIs
+- Implementing [domain] solutions
+- Debugging [domain] code
+- Learning [domain] best practices
 
-## Instructions
+## Quick Reference
 
-### Step 1: [Step Name]
+### Common Patterns
 
-[Detailed explanation]
-
-### Step 2: [Step Name]
-
-[Detailed explanation]
-
-### Step 3: [Step Name]
-
-[Detailed explanation]
-
-## Examples
-
-### Example 1: [Scenario Name]
-
-**Input:**
-
-```
-[input content]
+**Pattern 1:** [Name]
+```[language]
+[code example]
 ```
 
-**Output:**
-
-```
-[output content]
-```
-
-### Example 2: [Scenario Name]
-
-**Input:**
-
-```
-[input content]
+**Pattern 2:** [Name]
+```[language]
+[code example]
 ```
 
-**Output:**
-
+**Pattern 3:** [Name]
+```[language]
+[code example]
 ```
-[output content]
+
+### Example Code Patterns
+
+**Example 1** ([language]):
+```[language]
+// [Description of what this example demonstrates]
+[complete working code]
 ```
 
-## Constraints
+**Example 2** ([language]):
+```[language]
+// [Description]
+[complete working code]
+```
 
-- Limitation 1: [description]
-- Limitation 2: [description]
-- Limitation 3: [description]
+## [Domain-Specific Section 1]
 
-## Error Handling
+### [Subsection]
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| Error 1 | [cause] | [solution] |
-| Error 2 | [cause] | [solution] |
+[Content]
+
+### [Subsection]
+
+[Content]
+
+## [Domain-Specific Section 2]
+
+### [Subsection]
+
+[Content]
+
+## Reference Files
+
+This skill includes comprehensive documentation in `references/`:
+
+- **getting_started.md** - Installation, setup, first steps
+- **api.md** - Complete API reference
+- **examples.md** - Code examples by use case
+- **troubleshooting.md** - Common issues and solutions
+
+Use `view` to read specific reference files when detailed information is needed.
+
+## Working with This Skill
+
+### For Beginners
+Start with the getting_started reference file for foundational concepts.
+
+### For Specific Features
+Use the api reference file for detailed function/method information.
+
+### For Code Examples
+The examples reference file contains patterns organized by use case.
 
 ## Resources
 
-- [Resource 1](link)
-- [Resource 2](link)
+### references/
+Organized documentation extracted from official sources:
+- Detailed explanations
+- Code examples with language annotations
+- Links to original documentation
+
+### scripts/
+Helper scripts for common automation tasks.
+
+### assets/
+Templates, boilerplate, and example configurations.
+
+## Notes
+
+- This skill was generated from official documentation
+- Reference files preserve structure from source docs
+- Code examples include language detection for syntax highlighting
+- Quick reference patterns are extracted from common usage

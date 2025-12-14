@@ -1,10 +1,13 @@
 # Claude Skills Documentation Index
 
+## Overview
+
+This index provides navigation for the Claude Skills meta-skill documentation.
+
 ## Categories
 
-### README
+### Official Documentation
 **File:** `README.md`
-**Pages:** 1 (122 lines)
 
 Complete overview of Claude Skills including:
 - What are skills and how they work
@@ -12,18 +15,46 @@ Complete overview of Claude Skills including:
 - Document skills (source-available)
 - Usage across platforms (Claude Code, Claude.ai, API)
 - Creating basic skills
-- Partner skills
 
 ## Quick Links
 
-- What are skills → `README.md` (line 1-9)
-- Example skills list → `README.md` (line 24-45)
-- Document skills → `README.md` (line 47-56)
-- Claude Code setup → `README.md` (line 58-78)
-- Claude.ai usage → `README.md` (line 80-84)
-- Claude API → `README.md` (line 86-88)
-- Creating a skill → `README.md` (line 90-117)
-- Partner skills → `README.md` (line 119-122)
+| Topic | File | Section |
+|-------|------|---------|
+| What are skills | `README.md` | Lines 1-9 |
+| Example skills list | `README.md` | Lines 24-45 |
+| Document skills | `README.md` | Lines 47-56 |
+| Claude Code setup | `README.md` | Lines 58-78 |
+| Claude.ai usage | `README.md` | Lines 80-84 |
+| Claude API | `README.md` | Lines 86-88 |
+| Creating a skill | `README.md` | Lines 90-117 |
+
+## Skill Structure Reference
+
+### Required Files
+
+```
+skill-name/
+└── SKILL.md           # Main instructions with YAML frontmatter
+```
+
+### Optional Directories
+
+```
+skill-name/
+├── SKILL.md
+├── references/        # Documentation files
+├── scripts/           # Helper scripts
+└── assets/            # Templates, configs
+```
+
+### YAML Frontmatter
+
+```yaml
+---
+name: skill-name          # lowercase, hyphens
+description: What + When  # Purpose and trigger conditions
+---
+```
 
 ## Topics Covered
 
@@ -33,79 +64,37 @@ Complete overview of Claude Skills including:
 - Platform availability
 - Installation methods
 
-### Example Skills by Category
+### Skill Categories
 
-**Creative & Design:**
-- Algorithmic art generation
-- Canvas design
-- Slack GIF creation
-
-**Development & Technical:**
-- HTML artifacts builder
-- MCP server creation
-- Webapp testing
-
-**Enterprise & Communication:**
-- Brand guidelines
-- Internal communications
-- Theme factory
-
-**Meta Skills:**
-- Skill creator guide
-- Template skill
-
-### Document Skills (Advanced)
-- DOCX (Word documents)
-- PDF (PDF manipulation)
-- PPTX (PowerPoint presentations)
-- XLSX (Excel spreadsheets)
-
-### Creating Skills
-- Basic structure (folder + SKILL.md)
-- YAML frontmatter requirements
-- Markdown instructions
-- Template usage
+| Category | Examples |
+|----------|----------|
+| Creative | algorithmic-art, canvas-design, slack-gif-creator |
+| Development | artifacts-builder, mcp-server, webapp-testing |
+| Enterprise | brand-guidelines, internal-comms, theme-factory |
+| Documents | docx, pdf, pptx, xlsx |
+| Meta | skill-creator, template-skill |
 
 ### Platform Integration
-- Claude Code plugin marketplace
-- Claude.ai skills interface
-- Claude API integration
-- Cross-platform portability
 
-## Skill Structure
-
-```
-skill-name/
-├── SKILL.md           # Required: Main instructions
-├── references/        # Optional: Documentation
-├── scripts/           # Optional: Helper scripts
-└── assets/            # Optional: Resources
-```
-
-## YAML Frontmatter
-
-```yaml
----
-name: skill-name
-description: Clear description of what the skill does
----
-```
+| Platform | Method |
+|----------|--------|
+| Claude Code | `/plugin marketplace add anthropics/skills` |
+| Claude.ai | Upload via skills interface |
+| Claude API | Skills API endpoint |
 
 ## External Resources
 
-- **Support Articles:**
-  - What are skills?
-  - Using skills in Claude
-  - Creating custom skills
+### Official Links
+- [What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills)
+- [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
+- [Creating custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills)
+- [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide)
+- [Anthropic Skills GitHub](https://github.com/anthropics/skills)
 
-- **Blog Posts:**
-  - Equipping agents with Agent Skills
-
-- **API Documentation:**
-  - Skills API Quickstart
-  - Creating skills via API
+### Blog Posts
+- [Equipping agents with Agent Skills](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 
 ## License
 
-Example skills: Apache 2.0 (open source)
-Document skills: Source-available (reference only)
+- Example skills: Apache 2.0 (open source)
+- Document skills: Source-available (reference only)
