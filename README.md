@@ -79,65 +79,79 @@
 
 ## 🧭 原则 (Principles)
 
-*   **自动化优先**: 优先利用 AI 自动化可执行的任务。
-*   **AI 咨询**: 将 AI 作为首要信息来源和问题解决方案的顾问。
-*   **目标驱动**: 开发过程中的所有活动都应围绕既定目标展开。
-*   **上下文决定质量**: 上下文的质量直接决定输出的质量（GIGO原则）。
-*   **系统性思维**: 从“实体”、“链接”、“功能/目的”三个维度进行系统性思考。
-*   **编程的本质**: 数据结构与算法是编程的核心。
-*   **流程化**: 使用“输入 -> 处理 -> 输出”的模式来刻画整个工作流程。
-*   **深度提问**: 频繁向 AI 提出“是什么？”、“为什么？”、“怎么做？”以深化理解。
-*   **规划先行**: 先构建清晰的结构和框架，再进行编码，以避免后期产生技术债务。
-*   **奥卡姆剃刀**: 如无必要，勿增实体。保持代码简洁。
-*   **帕累托法则 (80/20 Rule)**: 关注项目中那 20% 的关键部分。
-*   **逆向工程**: 从最终需求出发，逆向构建解决方案。
-*   **迭代与容错**: 鼓励多次尝试，在遇到困难时考虑重置环境或另辟蹊径。
-*   **专注单一任务**: 保持高度专注，一次只解决一个问题，以确保深度和质量。
+* **凡是 ai 能做的，就不要人工做**
+* **一切问题问 ai**
+* **目的主导：开发过程中的一切动作围绕"目的"展开**
+* **上下文是 vibe coding 的第一性要素，垃圾进，垃圾出**
+* **系统性思考，实体，链接，功能/目的，三个维度**
+* **数据与函数即是编程的一切**
+* **输入，处理，输出刻画整个过程**
+* **多问 ai 是什么？，为什么？，怎么做？**
+* **先结构，后代码，一定要规划好框架，不然后面技术债还不完**
+* **奥卡姆剃刀定理，如无必要，勿增代码**
+* **帕累托法则，关注重要的那20%**
+* **逆向思考，先明确你的需求，从需求逆向构建代码**
+* **重复，多试几次，实在不行重新开个窗口，**
+* **专注，极致的专注可以击穿代码，一次只做一件事（神人除外）**
+
 
 ## 🧩 方法 (Methods)
 
-*   **明确边界**: 清晰定义任务的目标和非目标。
-*   **正交性**: 确保功能模块之间职责明确，减少重叠（视具体场景而定）。
-*   **重用优于重写**: 遵循 DRY 原则，优先寻找并复用现有解决方案，而非重复构建。
-*   **官方文档优先**: 在开发前，优先获取并利用官方文档作为 AI 的上下文。
-*   **按职责划分模块**: 基于单一职责原则进行模块拆分。
-*   **接口与实现分离**: 先定义接口，再实现具体逻辑。
-*   **增量式修改**: 每次只修改一个模块，便于追踪和调试。
-*   **文档即上下文**: 将文档撰写融入开发流程，而不是事后补充。
+* **一句话目标 + 非目标**
+* **正交性，功能不要太重复了，（这个分场景）**
+* **能抄不写，不重复造轮子，先问 ai 有没有合适的仓库，下载下来改**
+* **一定要看官方文档，先把官方文档爬下来喂给 ai**
+* **按职责拆模块**
+* **接口先行，实现后补**
+* **一次只改一个模块**
+* **文档即上下文，不是事后补**
 
 ## 🛠️ 技术 (Techniques)
 
-*   **明确变更范围**: 在指令中清晰说明允许修改和禁止修改的边界。
-*   **标准化调试信息**: 进行调试时，请提供“预期结果”、“实际表现”及“最小可复现示例”。
-*   **AI 辅助测试**: 可委托 AI 生成测试用例，但断言部分需要人工审查。
-*   **隔离会话**: 当代码库变得复杂时，为不同任务切换独立的会话以保持上下文纯净。
+* 明确写清：**能改什么，不能改什么**
+* Debug 只给：**预期 vs 实际 + 最小复现**
+* 测试可交给 AI，**断言人审**
+* 代码一多就**切会话**
 
-## 📋 工具集 (Toolset)
+## 📋 器
 
-*   [**Visual Studio Code**](https://code.visualstudio.com/): 功能强大的集成开发环境，适合代码阅读与手动修改。其 `Local History` 插件对新手尤其友好。
-*   **虚拟环境 (.venv)**: 强烈推荐使用，通过指令要求 AI 在虚拟环境中安装和运行依赖，可实现项目环境的一键配置与隔离，特别适用于 Python 开发。
-*   [**Claude 3 Opus**](https://claude.ai/): 在 Claude Code 等平台中使用，性能强大，响应迅速，提供 CLI 和 IDE 插件。
-*   [**GPT-4/GPT-5 Series**](https://chat.openai.com/): 在专用平台（如 Codex CLI）中使用，适用于处理大型项目和复杂逻辑。
-*   [**Gemini Advanced/Pro**](https://gemini.google.com/): 可通过 Gemini CLI 或 Google AI Studio 等多种渠道访问，适合执行脚本、整理文档和探索思路。
-*   [**Ollama**](https://ollama.com/): 本地大模型管理工具，可通过命令行方便地拉取和运行开源模型。
-*   [**Warp**](https://www.warp.dev/): 集成 AI 功能的现代化终端，能有效提升命令行操作和错误排查的效率。
-*   [**Augment**](https://app.augmentcode.com/): 提供强大的上下文引擎和提示词优化功能，有助于新手和懒人快速生成高质量指令。
-*   [**Cursor**](https://cursor.com/): 深度集成 AI 功能的 IDE，已获得广泛的用户认可。
-*   **提示词库**:
-    *   [**在线表格**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=2093180351#gid=2093180351&range=A1): 提供大量可直接复制使用的提示词。
-    *   [**第三方系统提示词库**](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools): 用于学习其他AI工具的系统提示词。
-*   **技能与模板**:
-    *   [**Skills 生成器**](https://github.com/yusufkaraaslan/Skill_Seekers): 可根据需求生成定制化的 Skills。
-    *   [**元提示词**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=1770874220#gid=1770874220): 用于生成提示词的提示词。
-    *   [**通用项目架构模板**](./documents/通用项目架构模板.md): 可用于快速搭建标准化的项目目录结构。
-*   **辅助工具**:
-    *   [**Mermaid Chart**](https://www.mermaidchart.com/): 用于将文本转换为架构图、序列图等可视化图表。
-    *   [**NotebookLM**](https://notebooklm.google.com/): 用于 AI 解读资料、音频和生成思维导图。
-    *   [**Zread**](https://zread.ai/): AI 驱动的 GitHub 仓库阅读工具，有助于快速理解项目和减少重复开发。
-    *   [**tmux**](https://github.com/tmux/tmux): 强大的终端复用工具，支持会话保持、分屏和后台任务，是服务器与多项目开发的利器。
-    *   [**Neovim (nvim)**](https://github.com/neovim/neovim): 高性能的现代化 Vim 编辑器，拥有丰富的插件生态，是键盘流开发者的首选。
-    *   [**LazyVim**](https://www.lazyvim.org/): 开箱即用的 Neovim 配置框架，预置了 LSP、代码补全、调试等全套功能。
-    *   [**DBeaver**](https://dbeaver.io/): 通用数据库管理客户端，支持多种数据库，功能全面，是后端与数据工程师的必备工具。
+- [**微软大战代码**](https://code.visualstudio.com/)，集成开发环境，初学者地基，你可以在这里手动修改和方便的阅读代码，cursor 更简单直观适合新手，插件现在应该只推荐一个就是 Local History
+- **虚拟环境.venv**，有了这个再也不用装环境了，直接命令 ai 必须安装和全程使用虚拟环境（.venv）（记得写入你的AGENTS或者CLAUDE的md文件的记忆里面）就行了，一键配置好再也不用浪费时间配环境了，主要是适用于 python
+- [**Claude Opus 4.5**](https://claude.ai/new)，在 Claude Code 中使用，很贵，但是尼区 iOS 订阅要便宜几百人民币，快 + 效果好，顶中顶，有 CLI 和 IDE 插件
+- [**gpt-5.1-codex.1-codex (xhigh)**](https://chatgpt.com/codex/)，在 Codex CLI 中使用，顶中顶，除了慢其他没得挑，大项目复杂逻辑唯一解，买 ChatGPT 会员就能用，有 CLI 和 IDE 插件
+- [**Droid**](https://factory.ai/news/terminal-bench)，这里面的 Claude Opus 4.5 体感比 Claude Code 原生还强，顶，有 CLI
+- [**Kiro**](https://kiro.dev/)，这里面的 Claude Opus 4.5 目前免费，就是 CLI 看不到正在运行的情况，没有找到恢复对话，有客户端和 CLI
+- [**Gemini CLI**](https://geminicli.com/)，目前免费用，干脏活用，Claude Code 或 Codex 写好的脚本拿它来执行可以，整理文档和找思路也合适，有客户端和 CLI
+- [**antigravity**](https://antigravity.google/)，谷歌的，可以免费用 Claude Opus 4.5 和 Gemini 3.0 Pro，大善人
+- [**AI Studio**](https://aistudio.google.com/prompts/new_chat)，谷歌家的，免费用 Gemini 3.0 Pro 和 Nano Banana
+- [**Gemini Enterprise**](https://cloud.google.com/gemini-enterprise)，谷歌企业版，目前能免费用 Nano Banana Pro
+- [**Augment**](https://app.augmentcode.com/)，上下文引擎和提示词优化按钮神中神，新手直接用它，点按钮自动帮你写好提示词，懒人必备
+- [**Cursor**](https://cursor.com/)，已经占领用户心智高地，人尽皆知
+- [**Windsurf**](https://windsurf.com/)，新用户有免费额度
+- [**Ollama**](https://ollama.com/)，本地模型 CLI 管理器，拉模型、跑模型一条命令，可用本地部署一些开源的模型
+- [**Warp**](https://www.warp.dev/)，AI 终端，体验不错，写命令和解释错误挺省心
+- [**GitHub Copilot**](https://github.com/copilot)，没深度用过
+- [**Kimi K2**](https://www.kimi.com/)，国产，还行，干脏活和简单任务用，之前 2 元一个 key，一周 1024 次调用，性价比高
+- [**GLM**](https://bigmodel.cn/)，国产，听说很强，体感接近 Claude Sonnet 4
+- [**Qwen**](https://qwenlm.github.io/qwen-code-docs/zh/cli/)，阿里出的，CLI 有免费额度
+- [**提示词库（直接复制粘贴即可用）**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=2093180351#gid=2093180351&range=A1)
+- [**其他编程工具的系统提示词学习库**](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)
+- [**Skills 制作器（下好后让 AI 按你的需求生成 Skills）**](https://github.com/yusufkaraaslan/Skill_Seekers)
+- [**元提示词（生成提示词的提示词）**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=1770874220#gid=1770874220)
+- [**通用项目架构模板**](./documents/通用项目架构模板.md)，一键丢给 AI 就能搭好目录结构
+- [**Augment 提示词优化器**](https://app.augmentcode.com/)，提示词优化是真的好用，强烈推荐
+- [**Mermaid Chart**](https://www.mermaidchart.com/)，架构 / 思维导图可视化，做架构图，序列图的时候复制到这里看
+- [**NotebookLM**](https://notebooklm.google.com/)，资料 AI 解读、听音频、看思维导图、配合 Nano Banana 图片
+- [**Zread**](https://zread.ai/)，AI 读 GitHub 仓库神器，减少造轮子
+- [**元技能：Skills 的 Skills**](./skills/claude-skills/SKILL.md)，就是生成 Skills 的 Skills
+- [**tmux快捷键大全**](./documents/tmux快捷键大全.md)，远程链接ssh用，再也不怕ssh端了终端会话丢失了
+- [**二哥的Java进阶之路**](https://javabetter.cn/)，里面有小工具的详细配置教程
+- [**tmux**](https://github.com/tmux/tmux)，终端复用神器，一个窗口顶多个终端会话，分屏、会话保持、远程不断线，服务器党 / 多项目并行必备
+- [**nvim**](https://github.com/neovim/neovim)，现代化 Vim，插件生态成熟、性能极强，适合写代码、改配置、SSH 远程干活，键盘流天花板
+- [**LazyVim**](https://github.com/LazyVim/LazyVim)，基于 Neovim 的成体系配置框架，预置 LSP / 补全 / 调试 / Git 等全套能力，开箱即用又能逐步深度定制，不想从零配 nvim 的最优解
+- [**LazyVim快捷键大全**](./documents/LazyVim快捷键大全.md)，系统掌握 LazyVim 键盘流，提升编码效率
+- [**DBeaver**](https://dbeaver.io/)，全能数据库客户端，支持 MySQL / PostgreSQL / SQLite / ClickHouse 等，连本地、服务器、SSH 隧道都很顺，查数据、改表结构、看执行计划都很舒服，工程党必备
+- [**虚拟卡**](https://www.bybit.com/cards/?ref=YDGAVPN&source=applet_invite)，注册有这个卡你可以注册 aws 赠送的 100 美金的服务器额度，可以用很久，选澳大利亚地区的通过很快
 
 ---
 
